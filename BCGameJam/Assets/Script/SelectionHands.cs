@@ -8,12 +8,13 @@ public class SelectionHands : MonoBehaviour {
 	public GoodHandStyle goodHandStyle;
 	public Sprite[] sprites;
 	public LayerMask layerMask;
+	public bool minusHeart;
 	private SpriteRenderer spriteRneder;
 	private Animator anim;
 
 	// Use this for initialization
 	void Start () {
-
+		minusHeart = true;
 		spriteRneder = GetComponent<SpriteRenderer> ();
 		anim = gameObject.GetComponent<Animator> ();
 		CheckCurrentLocation ();

@@ -16,7 +16,9 @@ public class DestructionArea : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		Destroy (other.gameObject);
-		GameManager.instance.MinusLife ();
+		var handScript = other.GetComponent<SelectionHands> ();
+		if (handScript.minusHeart)
+			GameManager.instance.MinusLife ();
 		GameManager.instance.OnDestroyRespawnHands ();
 	}
 }

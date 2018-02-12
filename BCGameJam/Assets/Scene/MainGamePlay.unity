@@ -1974,8 +1974,8 @@ MonoBehaviour:
   gapSize: {x: 3, y: 1}
   delayToDisableUI: 0.5
   maximunHandsToGenerate: 3
-  maximumSpinSpeed: 35
-  minimunSpinSpeed: 100
+  maximumSpinSpeed: 65
+  minimunSpinSpeed: 120
   TimeGaptoRandomlizeTheSpeed: 5
   text_Score: {fileID: 977996177}
   lifeArray:

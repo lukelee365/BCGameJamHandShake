@@ -54,9 +54,9 @@ public class Selection : MonoBehaviour {
 					if (item.gameObject != gameObject) {
 						SelectionHands selectedHands = item.GetComponent<SelectionHands> ();
 						if (selectedHands.handType == HandsType.Good) {
-							// the result is Good
-							GameManager.instance.MinusLife();
                             ShowCross();
+							GameManager.instance.MinusLife ();
+							selectedHands.minusHeart = false;
                         } else {
 							GameManager.instance.AddScore ();
 							GameManager.instance.AddLife ();
@@ -68,6 +68,7 @@ public class Selection : MonoBehaviour {
 				}
 			} else {
                 ShowCross();
+				GameManager.instance.MinusLife ();
 			}
 		} else {
 			playerHandScript.ShakeHand ();
@@ -87,11 +88,14 @@ public class Selection : MonoBehaviour {
                             ShowCheck();
                         } else {
                             ShowCross();
+							selectedHands.minusHeart = false;
+							GameManager.instance.MinusLife ();
                         }
 					}
 				}
 			} else {
                 ShowCross();
+				GameManager.instance.MinusLife ();
             }
 		}
 

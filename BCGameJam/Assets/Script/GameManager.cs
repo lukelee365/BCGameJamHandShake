@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour {
 		Debug.Log ("Lose");
         UpdateHighestScore(currentScore);
         var temp = highestscore - currentScore;
-        EndGameText.text = "You Made " + currentScore + " Deals\n" + temp +" 250 Deals Away From our Top Dealer ";
+        EndGameText.text = "You Made " + currentScore + " Deals\n"+"250 Deals Away From our Top Dealer ";
         EndGameMenu.SetActive(true);
         EndSound.Play();
         Time.timeScale = 0;
@@ -139,7 +139,7 @@ public class GameManager : MonoBehaviour {
 		//move up 
 		handHolder.transform.Translate(Vector3.right*1.5f);
 		//reset to the start positions
-		handHolder.transform.RotateAround (handsWheel.transform.position, Vector3.forward, -75f);
+		handHolder.transform.RotateAround (handsWheel.transform.position, Vector3.forward, -65f);
 		handHolder.transform.parent = handsWheel.transform;
 		int degreeMulitplier = Random.Range (0, maximuHands);
 		handHolder.transform.RotateAround (handsWheel.transform.position, Vector3.forward, minimunGapBetweenHands* degreeMulitplier);
